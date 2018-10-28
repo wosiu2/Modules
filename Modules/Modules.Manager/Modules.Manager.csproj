@@ -44,6 +44,7 @@
     <Compile Include="SDMBasedParametersManager.cs" />
     <Compile Include="DuncanSoilModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SieveCoefficients.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Modules.Base\Modules.Base.csproj">

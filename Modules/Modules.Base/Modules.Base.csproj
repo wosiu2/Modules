@@ -41,20 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logic\IModulesCalculator.cs" />
     <Compile Include="Manager\IDuncanParameters.cs" />
-    <Compile Include="Manager\IInitialModulus.cs" />
-    <Compile Include="Manager\ISecantModulus.cs" />
     <Compile Include="Manager\ISieveCoefficient.cs" />
     <Compile Include="Manager\ISoilModel.cs" />
     <Compile Include="Manager\IStrengthParameters.cs" />
-    <Compile Include="Manager\ITangentModulus.cs" />
     <Compile Include="Model\BaseModel.cs" />
     <Compile Include="Model\SieveParameters.cs" />
     <Compile Include="Model\SoilSample.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Logic\" />
     <Folder Include="Repository\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

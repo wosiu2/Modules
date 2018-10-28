@@ -49,5 +49,23 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MathTools\MathTools.csproj">
+      <Project>{4425BB72-D351-4EDA-A5B0-6F9CFB445879}</Project>
+      <Name>MathTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modules.Base\Modules.Base.csproj">
+      <Project>{B9C4C418-1EB4-4B9E-A2B7-498273296862}</Project>
+      <Name>Modules.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modules.Logic\Modules.Logic.csproj">
+      <Project>{6A8B13B8-7360-4520-BA90-FDA857864071}</Project>
+      <Name>Modules.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modules.Manager\Modules.Manager.csproj">
+      <Project>{9AC500B0-2709-4713-9A08-3119645F87DD}</Project>
+      <Name>Modules.Manager</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

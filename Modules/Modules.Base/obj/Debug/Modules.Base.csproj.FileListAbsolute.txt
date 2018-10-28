@@ -1,0 +1,6 @@
+D:\Projekty\Modules\Modules\Modules.Base\bin\Debug\Modules.Base.dll
+D:\Projekty\Modules\Modules\Modules.Base\bin\Debug\Modules.Base.pdb
+D:\Projekty\Modules\Modules\Modules.Base\obj\Debug\Modules.Base.csprojAssemblyReference.cache
+D:\Projekty\Modules\Modules\Modules.Base\obj\Debug\Modules.Base.csproj.CoreCompileInputs.cache
+D:\Projekty\Modules\Modules\Modules.Base\obj\Debug\Modules.Base.dll
+D:\Projekty\Modules\Modules\Modules.Base\obj\Debug\Modules.Base.pdb

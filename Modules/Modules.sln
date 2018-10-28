@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modules.Manager", "Modules.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modules.Repository", "Modules.Repository\Modules.Repository.csproj", "{FC2546CC-5B53-4448-B913-33774B18B6CE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathTools", "MathTools\MathTools.csproj", "{4425BB72-D351-4EDA-A5B0-6F9CFB445879}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modules.Logic", "Modules.Logic\Modules.Logic.csproj", "{6A8B13B8-7360-4520-BA90-FDA857864071}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{FC2546CC-5B53-4448-B913-33774B18B6CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC2546CC-5B53-4448-B913-33774B18B6CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC2546CC-5B53-4448-B913-33774B18B6CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4425BB72-D351-4EDA-A5B0-6F9CFB445879}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4425BB72-D351-4EDA-A5B0-6F9CFB445879}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4425BB72-D351-4EDA-A5B0-6F9CFB445879}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4425BB72-D351-4EDA-A5B0-6F9CFB445879}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A8B13B8-7360-4520-BA90-FDA857864071}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A8B13B8-7360-4520-BA90-FDA857864071}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A8B13B8-7360-4520-BA90-FDA857864071}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A8B13B8-7360-4520-BA90-FDA857864071}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

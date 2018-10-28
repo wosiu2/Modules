@@ -4,22 +4,28 @@ using System;
 
 namespace Modules.Manager
 {
-    public class DuncanSoilModel : ISoilModel,IInitialModulus
+    public class DuncanSoilModel : ISoilModel
     {
         private IDuncanParameters _duncanParameters;
         private IStrengthParameters _strengthParameters;
         public double ConfiningPressure { get; set; }
         public double AtmosphericPressure { get; set; }
 
+        public DuncanSoilModel(IStrengthParameters strengthManager, IDuncanParameters duncanParametersManager)
+        {
+            _duncanParameters = duncanParametersManager;
+            _strengthParameters = strengthManager;
+        }
+
         public double GetDeviatoricStress(double eps)
         {
             double ultimateStress = GetUltimateStress();
-
-            if (ultimateStress == 0)
+            double initialModulus = GetInitialModulus();
+            if (ultimateStress == 0|| initialModulus==0)
             {
                 return 0;
             }
-            double baseValue = GetInitialModulus()+eps/ ultimateStress;
+            double baseValue = 1/initialModulus + eps/ ultimateStress;
 
             if (baseValue==0)
             {
@@ -31,7 +37,11 @@ namespace Modules.Manager
 
         public double GetUltimateStress()
         {
-            return GetFailureStress()* _duncanParameters.FailureRatio;
+            if (_duncanParameters.FailureRatio==0)
+            {
+                return 0;
+            }
+            return GetFailureStress()/ _duncanParameters.FailureRatio;
         }
 
         public double GetFailureStress()

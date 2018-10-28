@@ -6,25 +6,29 @@ namespace Modules.Manager
 {
     public class SDMBasedParametersManager : IDuncanParameters,IStrengthParameters
     {
-        private ISieveCoefficient _sieveCoefficients;
+        private SieveCoefficients _sieveCoefficients;
         private SoilSample _sample;
-        public double FailureRatio { get; private set; }
-        public double FrictionAngle { get; private set; }
-        public double Exponent { get ; private set; }
-        public double K { get; private set; }
+        public double FailureRatio { get => 0.7; }
+        public double FrictionAngle { get => GetFrictionAngle(); }
+        public double Exponent { get => GetExponent(); }
+        public double K { get => GetB() * GetMCoefficient(); }
         public SoilSample SoilSample {
             get => _sample;
             set
             {
                 _sample = value;
-                FrictionAngle = GetFrictionAngle();
-                Exponent = GetExponent();
-                K = GetK()* GetMCoefficient();
+                _sieveCoefficients.SieveParameters = _sample.SieveParameters;
+
             }
         }
-
         public double Cohesion { get; set; }
 
+        public SDMBasedParametersManager()
+        {
+            _sieveCoefficients = new SieveCoefficients();
+            SoilSample = new SoilSample();
+
+        }
         private double GetFrictionAngle()
         {
             double Cu = _sieveCoefficients.GetUniformity();   
@@ -36,9 +40,10 @@ namespace Modules.Manager
             double Cu = _sieveCoefficients.GetUniformity();
             return 1-(0.29*Math.Log10(_sample.SieveParameters.D50/0.01)- 0.065 * Math.Log10(Cu)) ;
         }
-        private double GetK()
+        private double GetB()
         {
-            return Math.Sin(GetFrictionAngleRad())*(3-2* Math.Sin(GetFrictionAngleRad()))/(2- Math.Sin(GetFrictionAngleRad()));
+            double s = Math.Sin(GetFrictionAngleRad()) * (3 - 2 * Math.Sin(GetFrictionAngleRad())) / (2 - Math.Sin(GetFrictionAngleRad()));
+            return s;
         }
         private double GetMCoefficient()
         {
@@ -49,8 +54,9 @@ namespace Modules.Manager
                 return 0;
             }
 
-            double e0 = SoilSample.Weight / SoilSample.SolidWeight - 1;
-            return 282 * Math.Pow(Cu, -0.77) * Math.Pow(e0, -2.83);
+            double e0 = SoilSample.SolidWeight/ SoilSample.Weight - 1;
+            double x = 282 * Math.Pow(Cu, -0.77) * Math.Pow(e0, -2.83);
+            return x;
         }
         public double GetFrictionAngleRad()
         {
