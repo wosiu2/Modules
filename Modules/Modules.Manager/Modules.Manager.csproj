@@ -45,8 +45,13 @@
     <Compile Include="DuncanSoilModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SieveCoefficients.cs" />
+    <Compile Include="SieveParametersManager.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MathTools\MathTools.csproj">
+      <Project>{4425BB72-D351-4EDA-A5B0-6F9CFB445879}</Project>
+      <Name>MathTools</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Modules.Base\Modules.Base.csproj">
       <Project>{B9C4C418-1EB4-4B9E-A2B7-498273296862}</Project>
       <Name>Modules.Base</Name>

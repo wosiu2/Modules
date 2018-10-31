@@ -1,0 +1,6 @@
+D:\Projekty\Modules\Modules\Modules.Repository\bin\Debug\Modules.Repository.dll
+D:\Projekty\Modules\Modules\Modules.Repository\bin\Debug\Modules.Repository.pdb
+D:\Projekty\Modules\Modules\Modules.Repository\obj\Debug\Modules.Repository.csprojAssemblyReference.cache
+D:\Projekty\Modules\Modules\Modules.Repository\obj\Debug\Modules.Repository.csproj.CoreCompileInputs.cache
+D:\Projekty\Modules\Modules\Modules.Repository\obj\Debug\Modules.Repository.dll
+D:\Projekty\Modules\Modules\Modules.Repository\obj\Debug\Modules.Repository.pdb

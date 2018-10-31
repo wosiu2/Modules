@@ -9,3 +9,4 @@ D:\Projekty\Modules\Modules\Modules.Logic\obj\Debug\Modules.Logic.csproj.CoreCom
 D:\Projekty\Modules\Modules\Modules.Logic\obj\Debug\Modules.Logic.csproj.CopyComplete
 D:\Projekty\Modules\Modules\Modules.Logic\obj\Debug\Modules.Logic.dll
 D:\Projekty\Modules\Modules\Modules.Logic\obj\Debug\Modules.Logic.pdb
+D:\Projekty\Modules\Modules\Modules.Logic\bin\Debug\Modules.Base.dll.config

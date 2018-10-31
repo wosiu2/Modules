@@ -31,7 +31,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -44,15 +48,16 @@
     <Compile Include="Logic\IModulesCalculator.cs" />
     <Compile Include="Manager\IDuncanParameters.cs" />
     <Compile Include="Manager\ISieveCoefficient.cs" />
+    <Compile Include="Manager\ISieveParametersManager.cs" />
     <Compile Include="Manager\ISoilModel.cs" />
     <Compile Include="Manager\IStrengthParameters.cs" />
     <Compile Include="Model\BaseModel.cs" />
-    <Compile Include="Model\SieveParameters.cs" />
+    <Compile Include="Model\SieveMesh.cs" />
+    <Compile Include="Model\SieveParameter.cs" />
     <Compile Include="Model\SoilSample.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\IBaseRepository.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Repository\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

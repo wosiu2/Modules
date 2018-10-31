@@ -41,6 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseModel\Point.cs" />
+    <Compile Include="Estimator\Abstraction\IEstimator.cs" />
+    <Compile Include="Estimator\Abstraction\ILinearCombination.cs" />
+    <Compile Include="Estimator\TwoPointEstimator.cs" />
+    <Compile Include="Estimator\LinearCombination.cs" />
     <Compile Include="NonlinearSolver\Abstraction\IDerivative.cs" />
     <Compile Include="NonlinearSolver\Abstraction\INonLinearSolver.cs" />
     <Compile Include="NonlinearSolver\Derivative.cs" />

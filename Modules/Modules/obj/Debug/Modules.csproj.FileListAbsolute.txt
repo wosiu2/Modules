@@ -14,3 +14,4 @@ D:\Projekty\Modules\Modules\Modules\bin\Debug\MathTools.dll
 D:\Projekty\Modules\Modules\Modules\bin\Debug\MathTools.pdb
 D:\Projekty\Modules\Modules\Modules\bin\Debug\Modules.Logic.dll
 D:\Projekty\Modules\Modules\Modules\bin\Debug\Modules.Logic.pdb
+D:\Projekty\Modules\Modules\Modules\bin\Debug\Modules.Base.dll.config

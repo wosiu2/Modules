@@ -7,7 +7,7 @@ namespace Modules.Manager
 {
     public class SieveCoefficients : ISieveCoefficient
     {
-        public SieveParameters SieveParameters { get; set; }
+        public SieveParameter SieveParameters { get; set; }
 
         public double GetCurvature()
         {
