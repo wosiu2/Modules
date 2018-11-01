@@ -1,6 +1,6 @@
 D:\Projekty\Modules\Modules\MathTools\bin\Debug\MathTools.dll
 D:\Projekty\Modules\Modules\MathTools\bin\Debug\MathTools.pdb
-D:\Projekty\Modules\Modules\MathTools\obj\Debug\MathTools.csprojAssemblyReference.cache
 D:\Projekty\Modules\Modules\MathTools\obj\Debug\MathTools.csproj.CoreCompileInputs.cache
 D:\Projekty\Modules\Modules\MathTools\obj\Debug\MathTools.dll
 D:\Projekty\Modules\Modules\MathTools\obj\Debug\MathTools.pdb
+D:\Projekty\Modules\Modules\MathTools\obj\Debug\MathTools.csprojAssemblyReference.cache

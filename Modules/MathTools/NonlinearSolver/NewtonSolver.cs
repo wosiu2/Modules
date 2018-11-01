@@ -46,7 +46,7 @@ namespace MathTools.NonlinearSolver
             {
                 if (Math.Abs(x1 - x0) < EpsX || Math.Abs(Function(x0)) < Eps0)
                 {
-                    Console.WriteLine(i);
+                    
                     return x0;
                 }
                 if (Derivative.GetFirstDerivative(x0) <Eps0) break;

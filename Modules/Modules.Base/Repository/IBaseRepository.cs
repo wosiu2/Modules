@@ -6,11 +6,15 @@ namespace Modules.Base.Repository
 {
     public interface IBaseRepository<TEntity>
     {
-        TEntity GetByIndex(int id);
-        IEnumerable<TEntity> GetAll();
-        int Update(TEntity entity);
-        int UpdateAll(IEnumerable<TEntity> entity);
-        int Delete(TEntity entity);
-        int DeleteAll(IEnumerable<TEntity> entity);
+        TEntity Get(int id);
+        IEnumerable<TEntity> GetAll();     
+        void Delete(TEntity entity);
+        void DeleteRange(IEnumerable<TEntity> entities);
+        void DeleteAll();
+
+        void Add(TEntity entity);
+        void AddRange(IEnumerable<TEntity> entities);
+
+        void Complete();
     }
 }

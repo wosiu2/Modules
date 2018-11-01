@@ -32,7 +32,7 @@ namespace Modules.Manager
 
             if (IsValid())
             {
-                param.FineGrains = new SieveMesh() { Size = FinesSize, Amount = _estimator.Estimate(FinesSize) };
+                param.FineGrain = new SieveMesh() { Size = FinesSize, Amount = _estimator.Estimate(FinesSize) };
 
                 var data = GetPointsAmountDependant();
                 _estimator.EstimatorData = data;
@@ -60,12 +60,12 @@ namespace Modules.Manager
 
         public IEnumerable<Point> GetPointsSizeDependant()
         {
-            return Soil.TestResults.OrderBy(n => n.Size).Select(n => new Point() { Y = n.Amount, X = n.Size });
+            return Soil.TestResult.OrderBy(n => n.Size).Select(n => new Point() { Y = n.Amount, X = n.Size });
         }
 
         public IEnumerable<Point> GetPointsAmountDependant()
         {
-            return Soil.TestResults.OrderBy(n => n.Amount).Select(n=>new Point() { X=n.Amount,Y=n.Size});
+            return Soil.TestResult.OrderBy(n => n.Amount).Select(n=>new Point() { X=n.Amount,Y=n.Size});
         }
     }
 

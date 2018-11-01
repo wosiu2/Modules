@@ -17,7 +17,7 @@ namespace Modules.Manager
             set
             {
                 _sample = value;
-                _sieveCoefficients.SieveParameters = _sample.SieveParameters;
+                _sieveCoefficients.SieveParameters = _sample.SieveParameter;
 
             }
         }
@@ -32,13 +32,13 @@ namespace Modules.Manager
         private double GetFrictionAngle()
         {
             double Cu = _sieveCoefficients.GetUniformity();   
-            return 26+10*(SoilSample.Compaction-75)/25+0.4*Cu+1.6*Math.Log10(SoilSample.SieveParameters.D50);
+            return 26+10*(SoilSample.Compaction-75)/25+0.4*Cu+1.6*Math.Log10(SoilSample.SieveParameter.D50);
         }
         
         private double GetExponent()
         {
             double Cu = _sieveCoefficients.GetUniformity();
-            return 1-(0.29*Math.Log10(_sample.SieveParameters.D50/0.01)- 0.065 * Math.Log10(Cu)) ;
+            return 1-(0.29*Math.Log10(_sample.SieveParameter.D50/0.01)- 0.065 * Math.Log10(Cu)) ;
         }
         private double GetB()
         {

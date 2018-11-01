@@ -10,3 +10,5 @@ D:\Projekty\Modules\Modules\Modules.Logic\obj\Debug\Modules.Logic.csproj.CopyCom
 D:\Projekty\Modules\Modules\Modules.Logic\obj\Debug\Modules.Logic.dll
 D:\Projekty\Modules\Modules\Modules.Logic\obj\Debug\Modules.Logic.pdb
 D:\Projekty\Modules\Modules\Modules.Logic\bin\Debug\Modules.Base.dll.config
+D:\Projekty\Modules\Modules\Modules.Logic\bin\Debug\EntityFramework.dll
+D:\Projekty\Modules\Modules\Modules.Logic\bin\Debug\EntityFramework.xml

@@ -4,3 +4,12 @@ D:\Projekty\Modules\Modules\Modules.Repository\obj\Debug\Modules.Repository.cspr
 D:\Projekty\Modules\Modules\Modules.Repository\obj\Debug\Modules.Repository.csproj.CoreCompileInputs.cache
 D:\Projekty\Modules\Modules\Modules.Repository\obj\Debug\Modules.Repository.dll
 D:\Projekty\Modules\Modules\Modules.Repository\obj\Debug\Modules.Repository.pdb
+D:\Projekty\Modules\Modules\Modules.Repository\bin\Debug\Modules.Repository.dll.config
+D:\Projekty\Modules\Modules\Modules.Repository\bin\Debug\EntityFramework.dll
+D:\Projekty\Modules\Modules\Modules.Repository\bin\Debug\EntityFramework.SqlServer.dll
+D:\Projekty\Modules\Modules\Modules.Repository\bin\Debug\Modules.Base.dll
+D:\Projekty\Modules\Modules\Modules.Repository\bin\Debug\Modules.Base.pdb
+D:\Projekty\Modules\Modules\Modules.Repository\bin\Debug\EntityFramework.xml
+D:\Projekty\Modules\Modules\Modules.Repository\bin\Debug\EntityFramework.SqlServer.xml
+D:\Projekty\Modules\Modules\Modules.Repository\obj\Debug\Modules.Repository.csproj.CopyComplete
+D:\Projekty\Modules\Modules\Modules.Repository\bin\Debug\Modules.Base.dll.config

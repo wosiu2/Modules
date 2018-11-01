@@ -62,8 +62,8 @@ D:\Projekty\Modules\Modules\Modules.WebGUI\bin\System.Web.Webpages.Razor.xml
 D:\Projekty\Modules\Modules\Modules.WebGUI\bin\System.Web.Helpers.xml
 D:\Projekty\Modules\Modules\Modules.WebGUI\bin\System.Web.Mvc.xml
 D:\Projekty\Modules\Modules\Modules.WebGUI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\Projekty\Modules\Modules\Modules.WebGUI\obj\Debug\Modules.WebGUI.csprojAssemblyReference.cache
 D:\Projekty\Modules\Modules\Modules.WebGUI\obj\Debug\Modules.WebGUI.csproj.CoreCompileInputs.cache
 D:\Projekty\Modules\Modules\Modules.WebGUI\obj\Debug\Modules.WebGUI.csproj.CopyComplete
 D:\Projekty\Modules\Modules\Modules.WebGUI\obj\Debug\Modules.WebGUI.dll
 D:\Projekty\Modules\Modules\Modules.WebGUI\obj\Debug\Modules.WebGUI.pdb
+D:\Projekty\Modules\Modules\Modules.WebGUI\obj\Debug\Modules.WebGUI.csprojAssemblyReference.cache

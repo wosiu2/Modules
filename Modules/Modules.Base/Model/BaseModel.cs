@@ -1,10 +1,14 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Modules.Base.Model
 {
-    public class BaseModel
+    public abstract class BaseModel
     {
-        int Id { get; set; }
-        DateTime TimeStamp { get; set; }
+        [Index(IsUnique = true)]
+        [Required]
+        public int Id { get; set; }
+        //public DateTime TimeStamp { get; set; }
     }
 }

@@ -49,7 +49,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseRepository.cs" />
+    <Compile Include="ModulesDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\SieveMeshRepository.cs" />
+    <Compile Include="Repositories\SieveParameterRepository.cs" />
+    <Compile Include="Repositories\SoilSampleRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Modules.Base\Modules.Base.csproj">

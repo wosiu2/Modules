@@ -74,6 +74,10 @@
       <Project>{9AC500B0-2709-4713-9A08-3119645F87DD}</Project>
       <Name>Modules.Manager</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Modules.Repository\Modules.Repository.csproj">
+      <Project>{FC2546CC-5B53-4448-B913-33774B18B6CE}</Project>
+      <Name>Modules.Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

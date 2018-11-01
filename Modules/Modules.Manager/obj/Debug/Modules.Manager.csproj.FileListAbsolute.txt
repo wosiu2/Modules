@@ -7,6 +7,8 @@ D:\Projekty\Modules\Modules\Modules.Manager\obj\Debug\Modules.Manager.csproj.Cor
 D:\Projekty\Modules\Modules\Modules.Manager\obj\Debug\Modules.Manager.csproj.CopyComplete
 D:\Projekty\Modules\Modules\Modules.Manager\obj\Debug\Modules.Manager.dll
 D:\Projekty\Modules\Modules\Modules.Manager\obj\Debug\Modules.Manager.pdb
-D:\Projekty\Modules\Modules\Modules.Manager\bin\Debug\Modules.Base.dll.config
 D:\Projekty\Modules\Modules\Modules.Manager\bin\Debug\MathTools.dll
 D:\Projekty\Modules\Modules\Modules.Manager\bin\Debug\MathTools.pdb
+D:\Projekty\Modules\Modules\Modules.Manager\bin\Debug\Modules.Base.dll.config
+D:\Projekty\Modules\Modules\Modules.Manager\bin\Debug\EntityFramework.dll
+D:\Projekty\Modules\Modules\Modules.Manager\bin\Debug\EntityFramework.xml

@@ -1,44 +1,86 @@
-﻿using Modules.Base.Model;
-using Modules.Base.Repository;
-using System;
+﻿using Modules.Base.Repository;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Modules.Repository
 {
-    public abstract class BaseRepository<TEntity> : IBaseRepository<TEntity>
-        where TEntity : BaseModel
+    public abstract class BaseRepository<TEntity, C> : IBaseRepository<TEntity>
+        where TEntity : class
+        where C : DbContext, new()
     {
-        public int Delete(TEntity entity)
+        protected C _context = new C();
+
+        public C Context
         {
-            throw new NotImplementedException();
+            get {
+                return _context;
+            }
+
+            set
+            {
+                _context = value;
+            }
         }
 
-        public int DeleteAll(IEnumerable<TEntity> entity)
+        /// <summary>
+        /// usuwa element podany na wejsciu
+        /// </summary>
+        /// <param name="entity"></param>
+        public void Delete(TEntity entity)
         {
-            throw new NotImplementedException();
+            _context.Set<TEntity>().Remove(entity);
+        }
+        /// <summary>
+        /// Usuwa wszystkie encje danej klasy
+        /// </summary>
+        public virtual void DeleteAll()
+        {
+            foreach (TEntity entity in _context.Set<TEntity>())
+            {
+                _context.Set<TEntity>().Remove(entity);
+            }
         }
 
-        public IEnumerable<TEntity> GetAll()
+        /// <summary>
+        /// metoda usuwa elementy danej klasy ktore przechowywane sa w kolekcji wejsciowej entities
+        /// </summary>
+        /// <param name="entities"></param>
+        public virtual void DeleteRange(IEnumerable<TEntity> entities)
         {
-            throw new NotImplementedException();
+            _context.Set<TEntity>().RemoveRange(entities);
         }
 
-        public TEntity GetByIndex(int id)
+        /// <summary>
+        /// Metoda abstrakcyjna ktorej wynikiem dzialania jest encja danej klasy
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public abstract TEntity Get(int id);
+
+        /// <summary>
+        /// Metoda zwraca kolekcje elementow danej klasy
+        /// </summary>
+        /// <returns></returns>
+        public virtual IEnumerable<TEntity> GetAll()
         {
-            throw new NotImplementedException();
+            return _context.Set<TEntity>().Select(n => n).ToList();
         }
 
-        public int Update(TEntity entity)
+        public virtual void Complete()
         {
-            throw new NotImplementedException();
+            _context.SaveChanges();
         }
 
-        public int UpdateAll(IEnumerable<TEntity> entity)
+        public void Add(TEntity entity)
         {
-            throw new NotImplementedException();
+            _context.Set<TEntity>().Add(entity);
+        }
+
+        public void AddRange(IEnumerable<TEntity> entities)
+        {
+            _context.Set<TEntity>().AddRange(entities);
         }
     }
 }
