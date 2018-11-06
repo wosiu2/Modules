@@ -3,6 +3,7 @@ using MathTools.Estimator;
 using Modules.Base.Model;
 using Modules.Logic;
 using Modules.Manager;
+using Modules.Manager.USCS;
 using Modules.Repository;
 using System;
 using System.Collections.Generic;
@@ -16,7 +17,7 @@ namespace Modules
         {
             var _soilSample = new SoilSample();
             _soilSample.TestResult = new List<SieveMesh>();
-            _soilSample.TestResult.Add(new SieveMesh() { Amount = 0.01, Size = 0.063 });
+            _soilSample.TestResult.Add(new SieveMesh() { Amount = 0.01, Size = 0.075 });
             _soilSample.TestResult.Add(new SieveMesh() { Amount = 0.18, Size = 0.125 });
             _soilSample.TestResult.Add(new SieveMesh() { Amount = 0.25, Size = 0.25 });
             _soilSample.TestResult.Add(new SieveMesh() { Amount = 0.45, Size = 0.5 });
@@ -30,7 +31,18 @@ namespace Modules
             _soilSample.Compaction = 98;
             _soilSample.SolidWeight = 26;
 
+            /*
+                        var plast = new PlasticityClass("S", true);
 
+                        var grade = new GradeClass("S",6);
+
+                        var d=grade.GetClass(_soilSample);
+
+                        var p = plast.GetClass(new Base.Model.NonDb.AttenbergLimits() {PlasticLimit=20,LiquidLimit=20 });
+                        */
+            var cla = new BasicClassificationManager(_soilSample,new Base.Model.NonDb.AttenbergLimits() { PlasticLimit=20,LiquidLimit=20});
+
+            var fsd = cla.Classify();
             var _soilParameters = new SDMBasedParametersManager();
 
             _soilParameters.SoilSample = _soilSample;
@@ -45,13 +57,20 @@ namespace Modules
 
             double secant = modules.GetSecantModulus(.2);
             double tangent = modules.GetTangentModulus(.2);
-
+           /* 
+            var repoU = new UserRepository();
+            repoU.Add(new User() { Login = "wosiu", Passwd = "sss" });
+            repoU.Complete();
+           
             _soilSample.UserId = 1;
+            _soilSample.Name = "dadssdasadsaa";
+
 
             var repo = new SoilSampleRepository();
             SoilSample usr=repo.Get(1);
+
             repo.Add(_soilSample);
-            repo.Complete();
+            repo.Complete();*/
         }
     }
 }

@@ -17,6 +17,7 @@ namespace Modules.Base.Model
         public double Weight { get; set; }
         public double SolidWeight { get; set; }
         public double Compaction { get; set; }
+        public string Name { get; set; }
 
         [ForeignKey("User")]
         public int UserId { get; set; }

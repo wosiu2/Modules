@@ -49,12 +49,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Logic\IModulesCalculator.cs" />
+    <Compile Include="Manager\IClassify.cs" />
     <Compile Include="Manager\IDuncanParameters.cs" />
     <Compile Include="Manager\ISieveCoefficient.cs" />
     <Compile Include="Manager\ISieveParametersManager.cs" />
     <Compile Include="Manager\ISoilModel.cs" />
     <Compile Include="Manager\IStrengthParameters.cs" />
     <Compile Include="Model\BaseModel.cs" />
+    <Compile Include="Model\NonDb\AttenbergLimits.cs" />
     <Compile Include="Model\SieveMesh.cs" />
     <Compile Include="Model\SieveParameter.cs" />
     <Compile Include="Model\SoilSample.cs" />

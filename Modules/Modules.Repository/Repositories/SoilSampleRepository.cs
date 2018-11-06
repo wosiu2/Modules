@@ -1,6 +1,7 @@
 ﻿using Modules.Base.Model;
 using Modules.Base.Repository;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 
 namespace Modules.Repository
@@ -26,6 +27,23 @@ namespace Modules.Repository
         public IEnumerable<SoilSample> GetAllForUser(int userId)
         {
             return GetAll().Where(n => n.UserId == userId);
+        }
+        public IEnumerable<SoilSample> GetAllForUserEager(int userId)
+        {
+            return _context.SoilSamples.Include(n=>n.TestResult).Where(n => n.UserId == userId);
+        }
+
+        public SoilSample GetEager(int id)
+        {
+            return _context.SoilSamples.Include(n => n.TestResult).Where(n => n.Id == id).SingleOrDefault();
+        }
+
+        public override void Delete(SoilSample entity)
+        {
+            
+            _context.SieveMeshes.RemoveRange(entity.TestResult);
+            _context.SieveParameters.Remove(entity.SieveParameter);
+            base.Delete(entity);
         }
 
     }

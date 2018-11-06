@@ -20,9 +20,11 @@ namespace Modules.Base.Model
         public double D50 { get; set; }
         public double D60 { get; set; }
 
+        public double FineGrainSize { get; set; }
+        public double FineGrainAmount { get; set; }
+
         public virtual SoilSample SoilSample { get; set; }
 
-        public virtual SieveMesh FineGrain { get; set; }
     }
 
 }

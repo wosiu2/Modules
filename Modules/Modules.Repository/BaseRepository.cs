@@ -28,7 +28,7 @@ namespace Modules.Repository
         /// usuwa element podany na wejsciu
         /// </summary>
         /// <param name="entity"></param>
-        public void Delete(TEntity entity)
+        public virtual void Delete(TEntity entity)
         {
             _context.Set<TEntity>().Remove(entity);
         }

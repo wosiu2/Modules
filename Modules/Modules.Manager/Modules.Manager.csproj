@@ -46,6 +46,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SieveCoefficients.cs" />
     <Compile Include="SieveParametersManager.cs" />
+    <Compile Include="USCS\BasicClassificationManager.cs" />
+    <Compile Include="USCS\GradeClass.cs" />
+    <Compile Include="USCS\HybrydClass.cs" />
+    <Compile Include="USCS\PlasticityClass.cs" />
+    <Compile Include="USCS\SizeClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MathTools\MathTools.csproj">

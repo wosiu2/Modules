@@ -67,3 +67,17 @@ D:\Projekty\Modules\Modules\Modules.WebGUI\obj\Debug\Modules.WebGUI.csproj.CopyC
 D:\Projekty\Modules\Modules\Modules.WebGUI\obj\Debug\Modules.WebGUI.dll
 D:\Projekty\Modules\Modules\Modules.WebGUI\obj\Debug\Modules.WebGUI.pdb
 D:\Projekty\Modules\Modules\Modules.WebGUI\obj\Debug\Modules.WebGUI.csprojAssemblyReference.cache
+D:\Projekty\Modules\Modules\Modules.WebGUI\bin\Modules.Base.dll
+D:\Projekty\Modules\Modules\Modules.WebGUI\bin\EntityFramework.dll
+D:\Projekty\Modules\Modules\Modules.WebGUI\bin\Modules.Base.pdb
+D:\Projekty\Modules\Modules\Modules.WebGUI\bin\Modules.Base.dll.config
+D:\Projekty\Modules\Modules\Modules.WebGUI\bin\EntityFramework.xml
+D:\Projekty\Modules\Modules\Modules.WebGUI\bin\Modules.Repository.dll
+D:\Projekty\Modules\Modules\Modules.WebGUI\bin\Modules.Repository.pdb
+D:\Projekty\Modules\Modules\Modules.WebGUI\bin\Modules.Repository.dll.config
+D:\Projekty\Modules\Modules\Modules.WebGUI\bin\EntityFramework.SqlServer.dll
+D:\Projekty\Modules\Modules\Modules.WebGUI\bin\EntityFramework.SqlServer.xml
+D:\Projekty\Modules\Modules\Modules.WebGUI\bin\Modules.Manager.dll
+D:\Projekty\Modules\Modules\Modules.WebGUI\bin\MathTools.dll
+D:\Projekty\Modules\Modules\Modules.WebGUI\bin\Modules.Manager.pdb
+D:\Projekty\Modules\Modules\Modules.WebGUI\bin\MathTools.pdb

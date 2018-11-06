@@ -15,13 +15,14 @@ namespace Modules.Manager
         public double FinesSize { get; set; }
         private IEstimator<double,Point> _estimator { get; set; }
         private IDerivative<double> _derivative;
-
+        public bool WithUpdate { get; set; }
         public SieveParametersManager(SoilSample _soil)
         {
             Soil = _soil;
             FinesSize = 0.063;
             _estimator = new TwoPointEstimator();          
             _derivative = new Derivative(x=>_estimator.Estimate(x),0.00001);
+            WithUpdate = true;
 
         }
 
@@ -32,7 +33,8 @@ namespace Modules.Manager
 
             if (IsValid())
             {
-                param.FineGrain = new SieveMesh() { Size = FinesSize, Amount = _estimator.Estimate(FinesSize) };
+                param.FineGrainSize = FinesSize;
+                param.FineGrainAmount = _estimator.Estimate(FinesSize);
 
                 var data = GetPointsAmountDependant();
                 _estimator.EstimatorData = data;
@@ -41,6 +43,15 @@ namespace Modules.Manager
                 param.D30 = _estimator.Estimate(0.3);
                 param.D50 = _estimator.Estimate(0.5);
                 param.D60 = _estimator.Estimate(0.6);
+                if (Soil.SieveParameter!=null)
+                {
+                    Soil.SieveParameter.D10 = param.D10;
+                    Soil.SieveParameter.D30 = param.D30;
+                    Soil.SieveParameter.D50 = param.D50;
+                    Soil.SieveParameter.D60 = param.D60;
+                    Soil.SieveParameter.FineGrainAmount = param.FineGrainAmount;
+                    Soil.SieveParameter.FineGrainSize = param.FineGrainSize;
+                }
 
             }
             return param;
@@ -66,6 +77,15 @@ namespace Modules.Manager
         public IEnumerable<Point> GetPointsAmountDependant()
         {
             return Soil.TestResult.OrderBy(n => n.Amount).Select(n=>new Point() { X=n.Amount,Y=n.Size});
+        }
+
+        public double EstimateGrain(double size)
+        {
+
+            var data = GetPointsSizeDependant();
+            _estimator.EstimatorData = data;
+
+            return _estimator.Estimate(size);
         }
     }
 

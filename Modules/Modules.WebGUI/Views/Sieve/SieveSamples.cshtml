@@ -1,0 +1,49 @@
+﻿
+@model IEnumerable<Modules.Base.Model.SoilSample>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SieveSamples</title>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <th>Sample name</th>
+                <th>Cc</th>
+                <th>Cu</th>
+
+            </tr>
+            @foreach (var n in Model)
+            {
+
+                var Cu = String.Format("{0:f2}", n.SieveParameter.D60 / n.SieveParameter.D10);
+
+                var Cc = String.Format("{0:f2}", n.SieveParameter.D30 * n.SieveParameter.D30 /
+                    (n.SieveParameter.D10 * n.SieveParameter.D60));
+
+                <tr>
+                    <td>@Html.DisplayFor(e => n.Name)</td>
+                    <td>@Html.DisplayFor(e => Cc)</td>
+                    <td>@Html.DisplayFor(e => Cu)</td>
+                    <td>
+                        @Html.ActionLink("Show", "ShowSample", new { id = n.Id })
+                        @Html.ActionLink("Edit", "EditSample", new { id = n.Id })
+                        @Html.ActionLink("Delete", "DeleteSample", new { id = n.Id })
+                        
+                    </td>
+                </tr>
+            }
+
+        </table>
+        @Html.ActionLink("Add", "AddSample")
+    </div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+﻿@model Modules.Base.Model.SoilSample
+@{
+    /**/
+
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddSample</title>
+</head>
+<body>
+    @using (Html.BeginForm())
+    {
+        <div id="Sample_Name">
+            Name of soil sample:
+            @Html.Editor("name")
+        </div>
+        <div id="Sample_Results">
+            <table>
+                <tr>
+                    <th>Mesh size [mm]</th>
+                    <th>Amount passed [%]</th>
+                </tr>
+                @{
+
+                    if (Model.TestResult != null)
+                    {
+                        var sieve = Model.TestResult.OrderBy(n => n.Size);
+                        foreach (var mesh in sieve)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(n => mesh.Size)
+                                </td>
+                                <td>
+                                    @{var amount = 100 * mesh.Amount;
+
+                                        @Html.DisplayFor(n => amount)
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    }
+
+
+
+                    int id = Model?.Id ?? 0;
+
+                    @Html.Hidden("id", id)
+
+                    <tr>
+                        <td>@Html.TextBox("Size")</td>
+                        <td>@Html.TextBox("Amount")</td>
+
+                    </tr>
+                }
+            </table>
+        </div>
+        <div>
+            <input type="submit" name="submit" value="Add" />
+        </div>
+        <div>
+            <input type="submit" name="submit" value="Save Sample" />
+        </div>
+        <div>
+            @{
+                <img src="@Url.Action("GetChart",new { id=Model.Id})" />
+            }
+        </div>
+    }
+</body>
+</html>
