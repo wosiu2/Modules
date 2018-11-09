@@ -17,7 +17,7 @@ namespace Modules
         {
             var _soilSample = new SoilSample();
             _soilSample.TestResult = new List<SieveMesh>();
-            _soilSample.TestResult.Add(new SieveMesh() { Amount = 0.01, Size = 0.075 });
+            _soilSample.TestResult.Add(new SieveMesh() { Amount = 0.06, Size = 0.063 });
             _soilSample.TestResult.Add(new SieveMesh() { Amount = 0.18, Size = 0.125 });
             _soilSample.TestResult.Add(new SieveMesh() { Amount = 0.25, Size = 0.25 });
             _soilSample.TestResult.Add(new SieveMesh() { Amount = 0.45, Size = 0.5 });
