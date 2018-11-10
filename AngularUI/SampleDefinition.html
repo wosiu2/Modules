@@ -1,95 +1,49 @@
-<!DOCTYPE html>
-
-<html>
-
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="CSS/navStyle.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.5/angular.min.js"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
-    <script src="Controllers/AppConfig.js"></script>
-    <script src="Controllers/SampleDefController.js"></script>
-</head>
-
-
-<body ng-app="AppModule" ng-controller="SampleDefController">
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">Features</a>
-                <a class="nav-item nav-link" href="#">Pricing</a>
-                <a class="nav-item nav-link disabled" href="#">Disabled</a>
-            </div>
+<div class="container contentConteiner">
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Sample name..." aria-label="Sample name" aria-describedby="nameButton">
+        <div class="input-group-append">
+            <button class="btn btn-primary" type="button" id="nameButton">Save sample</button>
         </div>
-    </nav>
-    <div class="container contentConteiner">
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Sample name..." aria-label="Sample name" aria-describedby="nameButton">
-            <div class="input-group-append">
-                <button class="btn btn-primary" type="button" id="nameButton">Save sample</button>
-            </div>
-        </div>
-        <table class="table">
-            <thead class="thead-light">
-                <tr>
-                    <th>Size [mm]</th>
-                    <th>Amount [%]</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat="datum in data">
-                    <td><span ng-hide="isHidden==$index">
+    </div>
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th>Size [mm]</th>
+                <th>Amount [%]</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="datum in data">
+                <td><span ng-hide="isHidden==$index">
                         {{datum.x}}
                         </span>
-                        <input class="form-control" type="number" ng-model="datum.x" ng-hide="!(isHidden==$index)" ng-pattern="/^[0-9]+(\.[0-9]{1,5})?$/" step="0.001" required>
-                    </td>
-                    <td><span ng-hide="isHidden==$index">
+                    <input class="form-control" type="number" ng-model="datum.x" ng-hide="!(isHidden==$index)" ng-pattern="/^[0-9]+(\.[0-9]{1,5})?$/" step="0.001" required>
+                </td>
+                <td><span ng-hide="isHidden==$index">
                         {{datum.y}}
                         </span>
-                        <input class="form-control" type="number" ng-model="datum.y" ng-hide="!(isHidden==$index)" ng-pattern="/^[0-9]+(\.[0-9]{1,5})?$/" step="0.001" required>
-                    </td>
-                    <td>
-                        <button ng-click="editItem($index)" ng-disabled="!datum.y||!datum.x" class="btn btn-primary">Edit</button>
+                    <input class="form-control" type="number" ng-model="datum.y" ng-hide="!(isHidden==$index)" ng-pattern="/^[0-9]+(\.[0-9]{1,5})?$/" step="0.001" required>
+                </td>
+                <td>
+                    <button ng-click="editItem($index)" ng-disabled="!datum.y||!datum.x" class="btn btn-primary">Edit</button>
 
 
-                        <button ng-click="deleteItem($index)" class="btn btn-primary">Delete</button>
-                    </td>
-                </tr>
-                <tr>
+                    <button ng-click="deleteItem($index)" class="btn btn-primary">Delete</button>
+                </td>
+            </tr>
+            <tr>
 
-                    <td><input type="number" class="form-control" name="inSize" ng-model="inputSize" ng-pattern="/^[0-9]+(\.[0-9]{1,5})?$/" step="0.001" required></td>
-                    <td><input type="number" class="form-control" name="inAmount" ng-model="inputAmount" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.001" required></td>
-                    <td><button ng-click="addItem()" ng-disabled="!inputSize||!inputAmount" class="btn btn-primary">Add</button></td>
-
-
-                </tr>
-            </tbody>
-        </table>
-        <canvas id="Chart"></canvas>
+                <td><input type="number" class="form-control" name="inSize" ng-model="inputSize" ng-pattern="/^[0-9]+(\.[0-9]{1,5})?$/" step="0.001" required></td>
+                <td><input type="number" class="form-control" name="inAmount" ng-model="inputAmount" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.001" required></td>
+                <td><button ng-click="addItem()" ng-disabled="!inputSize||!inputAmount" class="btn btn-primary">Add</button></td>
 
 
+            </tr>
+        </tbody>
+    </table>
+    <canvas id="Chart"></canvas>
 
-    </div>
 
-    <footer>
-        <p>Footer</p>
-    </footer>
-</body>
 
-</html>
+</div>

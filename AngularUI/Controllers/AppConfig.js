@@ -4,12 +4,12 @@
 
             $routeProvider
                 .when("/", {
-                    templateUrl: "D:\Projekty\Modules\AngularUI\SampleList.html",
+                    templateUrl: "SampleList.html",
                     controller: 'SampleListController'
 
                 })
-                .when("/sampleDefinition", {
-                    templateUrl: "D:\Projekty\Modules\AngularUI\SampleDefinition.html",
+                .when("/SampleDefinition", {
+                    templateUrl: "SampleDefinition.html",
                     controller: 'SampleDefController'
                 });
         });
