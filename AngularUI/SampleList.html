@@ -3,12 +3,14 @@
         <input type="text" class="form-control" placeholder="Find sample..." aria-label="Find sample" ng-model="findName">
 
     </div>
-    <table class="table">
+    <table class="table tables table-hover">
         <thead class="thead-light">
             <tr>
                 <th>Sample name</th>
+                <th>USCS type</th>
                 <th>Coefficient of uniformity</th>
                 <th>Coefficient of curvature</th>
+                <th>Fines amount [%]</th>
                 <th></th>
             </tr>
         </thead>
@@ -19,25 +21,28 @@
                         </span>
                     <input class="form-control" type="text" ng-model="datum.name" ng-hide="!(isHidden==$index)">
                 </td>
-                <td><span ng-hide="isHidden==$index">
-                        {{datum.Cu}}
-                        </span>
-                    <input class="form-control" type="number" ng-model="datum.Cu" ng-hide="!(isHidden==$index)">
-                </td>
-                <td><span ng-hide="isHidden==$index">
-                        {{datum.Cc}}
-                        </span>
-                    <input class="form-control" type="number" ng-model="datum.Cc" ng-hide="!(isHidden==$index)">
+                <td>
+                    {{datum.uscs}}
                 </td>
                 <td>
-                    <button ng-click="showItem($index)" class="btn btn-primary">Show</button>
-                    <button ng-click="editItem($index)" class="btn btn-primary">Edit</button>
-                    <button ng-click="deleteItem($index)" class="btn btn-primary">Delete</button>
+                    {{datum.Cu}}
+                </td>
+                <td>
+                    {{datum.Cc}}
+                </td>
+                <td>
+                    {{datum.Fines}}
+                </td>
+                <td>
+                    <button ng-click="showItem($index)" class="btn btn-primary btn-add">Show</button>
+                    <button ng-click="editItem($index)" class="btn btn-primary btn-add">Edit</button>
+                    <button ng-click="deleteItem($index)" class="btn btn-primary btn-add">Delete</button>
                 </td>
             </tr>
 
         </tbody>
 
     </table>
-    <button ng-click="addItem()" class="btn btn-primary btn-lg btn-block">Add</button>
+    <button ng-click="addItem()" class="btn btn-primary btn-lg btn-block btn-add">Add</button>
+
 </div>

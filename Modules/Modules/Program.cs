@@ -57,9 +57,9 @@ namespace Modules
 
             double secant = modules.GetSecantModulus(.2);
             double tangent = modules.GetTangentModulus(.2);
-           /* 
+           
             var repoU = new UserRepository();
-            repoU.Add(new User() { Login = "wosiu", Passwd = "sss" });
+            repoU.Add(new User() { Login = "wosiu", Passwd = "sss" ,Expire=200});
             repoU.Complete();
            
             _soilSample.UserId = 1;
@@ -67,10 +67,10 @@ namespace Modules
 
 
             var repo = new SoilSampleRepository();
-            SoilSample usr=repo.Get(1);
+            //SoilSample usr=repo.Get(1);
 
             repo.Add(_soilSample);
-            repo.Complete();*/
+            repo.Complete();
         }
     }
 }

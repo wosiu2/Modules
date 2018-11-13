@@ -1,8 +1,10 @@
 ﻿
 using Modules.Base.Repository;
+using Newtonsoft.Json;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+
 
 namespace Modules.Base.Model
 {
@@ -19,6 +21,8 @@ namespace Modules.Base.Model
 
         [ForeignKey("SoilSample")]
         public int SoilSampleId { get; set; }
+
+        [JsonIgnore]
         public virtual SoilSample SoilSample { get; set; }
 
 

@@ -1,5 +1,6 @@
 ﻿
 using Modules.Base.Repository;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -21,7 +22,7 @@ namespace Modules.Base.Model
 
         [ForeignKey("User")]
         public int UserId { get; set; }
-
+        [JsonIgnore]
         public virtual User User { get; set; }
 
         public virtual SieveParameter SieveParameter { get; set; }

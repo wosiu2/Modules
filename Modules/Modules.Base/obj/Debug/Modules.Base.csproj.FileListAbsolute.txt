@@ -10,3 +10,5 @@ D:\Projekty\Modules\Modules\Modules.Base\bin\Debug\Modules.Base.dll.config
 D:\Projekty\Modules\Modules\Modules.Base\bin\Debug\EntityFramework.SqlServer.dll
 D:\Projekty\Modules\Modules\Modules.Base\bin\Debug\EntityFramework.SqlServer.xml
 D:\Projekty\Modules\Modules\Modules.Base\obj\Debug\Modules.Base.csprojAssemblyReference.cache
+D:\Projekty\Modules\Modules\Modules.Base\bin\Debug\Newtonsoft.Json.dll
+D:\Projekty\Modules\Modules\Modules.Base\bin\Debug\Newtonsoft.Json.xml

@@ -1,0 +1,48 @@
+.tables {
+    font-size: 80%;
+    text-align: center
+}
+
+.btn-add {
+    font-size: 100%
+}
+
+body {
+    min-height: 400px;
+    margin-bottom: 100px;
+    clear: both;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+}
+
+.footer-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #e6e6e6;
+}
+
+.footer-link:link,
+.footer-link:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-link:hover,
+.footer-link:active {
+    color: white;
+}
+
+.login-div {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

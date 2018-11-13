@@ -12,3 +12,5 @@ D:\Projekty\Modules\Modules\Modules.Manager\bin\Debug\MathTools.pdb
 D:\Projekty\Modules\Modules\Modules.Manager\bin\Debug\Modules.Base.dll.config
 D:\Projekty\Modules\Modules\Modules.Manager\bin\Debug\EntityFramework.dll
 D:\Projekty\Modules\Modules\Modules.Manager\bin\Debug\EntityFramework.xml
+D:\Projekty\Modules\Modules\Modules.Manager\bin\Debug\Newtonsoft.Json.dll
+D:\Projekty\Modules\Modules\Modules.Manager\bin\Debug\Newtonsoft.Json.xml

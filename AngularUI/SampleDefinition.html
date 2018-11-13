@@ -5,8 +5,8 @@
             <button class="btn btn-primary" type="button" id="nameButton">Save sample</button>
         </div>
     </div>
-    <table class="table">
-        <thead class="thead-light">
+    <table class="table tables table-hover">
+        <thead class="thead-light ">
             <tr>
                 <th>Size [mm]</th>
                 <th>Amount [%]</th>
@@ -26,24 +26,21 @@
                     <input class="form-control" type="number" ng-model="datum.y" ng-hide="!(isHidden==$index)" ng-pattern="/^[0-9]+(\.[0-9]{1,5})?$/" step="0.001" required>
                 </td>
                 <td>
-                    <button ng-click="editItem($index)" ng-disabled="!datum.y||!datum.x" class="btn btn-primary">Edit</button>
+                    <button ng-click="editItem($index)" ng-disabled="!datum.y||!datum.x" class="btn btn-primary btn-add">Edit</button>
 
 
-                    <button ng-click="deleteItem($index)" class="btn btn-primary">Delete</button>
+                    <button ng-click="deleteItem($index)" class="btn btn-primary btn-add">Delete</button>
                 </td>
             </tr>
             <tr>
 
                 <td><input type="number" class="form-control" name="inSize" ng-model="inputSize" ng-pattern="/^[0-9]+(\.[0-9]{1,5})?$/" step="0.001" required></td>
-                <td><input type="number" class="form-control" name="inAmount" ng-model="inputAmount" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.001" required></td>
-                <td><button ng-click="addItem()" ng-disabled="!inputSize||!inputAmount" class="btn btn-primary">Add</button></td>
+                <td><input type="number" class="form-control" name="inAmount" ng-model="inputAmount" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.01" required></td>
+                <td><button ng-click="addItem()" ng-disabled="!inputSize||!inputAmount" class="btn btn-primary btn-add">Add</button></td>
 
 
             </tr>
         </tbody>
     </table>
     <canvas id="Chart"></canvas>
-
-
-
 </div>

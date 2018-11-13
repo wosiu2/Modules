@@ -1,5 +1,6 @@
 ﻿
 using Modules.Base.Repository;
+using Newtonsoft.Json;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -23,6 +24,7 @@ namespace Modules.Base.Model
         public double FineGrainSize { get; set; }
         public double FineGrainAmount { get; set; }
 
+        [JsonIgnore]
         public virtual SoilSample SoilSample { get; set; }
 
     }

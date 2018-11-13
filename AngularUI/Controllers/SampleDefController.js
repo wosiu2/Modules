@@ -1,6 +1,7 @@
        angular.module('AppModule')
            .controller('SampleDefController', function($scope) {
                $scope.isHidden = -1;
+
                $scope.data = [{
                    x: 10,
                    y: 10

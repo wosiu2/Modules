@@ -1,5 +1,6 @@
 ﻿
 using Modules.Base.Repository;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -22,6 +23,11 @@ namespace Modules.Base.Model
         [Required]
         public string Passwd { get; set; }
 
+        public Guid Cookie { get; set; }
+        public string IpAdress { get; set; }
+        public int Expire { get; set; }
+
+        [JsonIgnore]
         public ICollection<SoilSample> Sample { get; set; }
     }
 }

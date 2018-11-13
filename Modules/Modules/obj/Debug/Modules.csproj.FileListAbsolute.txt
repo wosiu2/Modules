@@ -22,3 +22,5 @@ D:\Projekty\Modules\Modules\Modules\bin\Debug\Modules.Repository.dll
 D:\Projekty\Modules\Modules\Modules\bin\Debug\Modules.Repository.pdb
 D:\Projekty\Modules\Modules\Modules\bin\Debug\Modules.Repository.dll.config
 D:\Projekty\Modules\Modules\Modules\bin\Debug\Modules.Base.dll.config
+D:\Projekty\Modules\Modules\Modules\bin\Debug\Newtonsoft.Json.dll
+D:\Projekty\Modules\Modules\Modules\bin\Debug\Newtonsoft.Json.xml
