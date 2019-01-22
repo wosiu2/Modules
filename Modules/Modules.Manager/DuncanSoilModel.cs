@@ -46,9 +46,9 @@ namespace Modules.Manager
 
         public double GetFailureStress()
         {
-            return (2* _strengthParameters.Cohesion*Math.Cos(_strengthParameters.GetFrictionAngleRad()) + 
-                2 * ConfiningPressure * Math.Sin(_strengthParameters.GetFrictionAngleRad()))/
-                (1-Math.Sin(_strengthParameters.GetFrictionAngleRad()));
+            return (2* _strengthParameters.Cohesion*Math.Cos(_strengthParameters.FrictionAngleRadians) + 
+                2 * ConfiningPressure * Math.Sin(_strengthParameters.FrictionAngleRadians))/
+                (1-Math.Sin(_strengthParameters.FrictionAngleRadians));
         }
 
         public double GetInitialModulus()

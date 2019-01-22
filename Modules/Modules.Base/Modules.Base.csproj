@@ -53,7 +53,9 @@
   <ItemGroup>
     <Compile Include="Logic\IModulesCalculator.cs" />
     <Compile Include="Manager\IClassify.cs" />
+    <Compile Include="Manager\IDataFilter.cs" />
     <Compile Include="Manager\IDuncanParameters.cs" />
+    <Compile Include="Manager\IMohrParameters.cs" />
     <Compile Include="Manager\ISieveCoefficient.cs" />
     <Compile Include="Manager\ISieveParametersManager.cs" />
     <Compile Include="Manager\ISoilModel.cs" />
@@ -62,6 +64,7 @@
     <Compile Include="Model\NonDb\AttenbergLimits.cs" />
     <Compile Include="Model\SieveMesh.cs" />
     <Compile Include="Model\SieveParameter.cs" />
+    <Compile Include="Model\TriaxialTest.cs" />
     <Compile Include="Model\SoilSample.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -72,6 +75,12 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MathTools\MathTools.csproj">
+      <Project>{4425BB72-D351-4EDA-A5B0-6F9CFB445879}</Project>
+      <Name>MathTools</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

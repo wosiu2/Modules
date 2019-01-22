@@ -23,6 +23,12 @@ namespace Modules.Manager
         }
         public double Cohesion { get; set; }
 
+        public double IncrementFrictionAngle => 0;
+
+        public double FrictionAngleRadians => FrictionAngle*Math.PI/180;
+
+        public double IncrementFrictionAngleRadians => 0;
+
         public SDMBasedParametersManager()
         {
             _sieveCoefficients = new SieveCoefficients();
@@ -42,7 +48,7 @@ namespace Modules.Manager
         }
         private double GetB()
         {
-            double s = Math.Sin(GetFrictionAngleRad()) * (3 - 2 * Math.Sin(GetFrictionAngleRad())) / (2 - Math.Sin(GetFrictionAngleRad()));
+            double s = Math.Sin(FrictionAngleRadians) * (3 - 2 * Math.Sin(FrictionAngleRadians)) / (2 - Math.Sin(FrictionAngleRadians));
             return s;
         }
         private double GetMCoefficient()
@@ -58,9 +64,6 @@ namespace Modules.Manager
             double x = 282 * Math.Pow(Cu, -0.77) * Math.Pow(e0, -2.83);
             return x;
         }
-        public double GetFrictionAngleRad()
-        {
-            return FrictionAngle * Math.PI / 180;
-        }
+
     }
 }

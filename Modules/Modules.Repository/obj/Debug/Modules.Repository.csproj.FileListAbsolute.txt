@@ -15,3 +15,5 @@ D:\Projekty\Modules\Modules\Modules.Repository\obj\Debug\Modules.Repository.cspr
 D:\Projekty\Modules\Modules\Modules.Repository\bin\Debug\Modules.Base.dll.config
 D:\Projekty\Modules\Modules\Modules.Repository\bin\Debug\Newtonsoft.Json.dll
 D:\Projekty\Modules\Modules\Modules.Repository\bin\Debug\Newtonsoft.Json.xml
+D:\Projekty\Modules\Modules\Modules.Repository\bin\Debug\MathTools.dll
+D:\Projekty\Modules\Modules\Modules.Repository\bin\Debug\MathTools.pdb

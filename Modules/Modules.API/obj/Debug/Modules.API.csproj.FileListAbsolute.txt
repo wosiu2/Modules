@@ -75,3 +75,5 @@ D:\Projekty\Modules\Modules\Modules.API\bin\EntityFramework.SqlServer.xml
 D:\Projekty\Modules\Modules\Modules.API\bin\System.Web.Cors.dll
 D:\Projekty\Modules\Modules\Modules.API\bin\System.Web.Http.Cors.dll
 D:\Projekty\Modules\Modules\Modules.API\bin\System.Web.Http.Cors.xml
+D:\Projekty\Modules\Modules\Modules.API\bin\MathTools.dll
+D:\Projekty\Modules\Modules\Modules.API\bin\MathTools.pdb
